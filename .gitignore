@@ -1,0 +1,14 @@
+node_modules
+.vite
+dist
+build
+coverage
+.env
+.env.local
+apps/*/.env
+apps/*/dist
+apps/*/coverage
+packages/*/dist
+prisma/*.db
+npm-debug.log*
+.DS_Store

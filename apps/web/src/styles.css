@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-950: #081a2c;
+  --navy-900: #0d2138;
+  --navy-800: #122c47;
+  --teal-500: #2bb6ad;
+  --teal-600: #1e9d9a;
+  --slate-50: #f5f8fc;
+  --slate-100: #edf3f9;
+  --slate-200: #dfeaf5;
+  --slate-300: #c7d7eb;
+  --slate-500: #5e7289;
+  --slate-700: #334863;
+  --white: #ffffff;
+  --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  background-color: #f5f8fc;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(43, 182, 173, 0.12), transparent 25%),
+    linear-gradient(180deg, #f7fafc 0%, #edf3f9 100%);
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.card-surface {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(6px);
+}
+
+.premium-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  inset: -30% auto auto -20%;
+  width: 180px;
+  height: 180px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(43, 182, 173, 0.18), transparent 70%);
+}
+
+.accent-ring:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(43, 182, 173, 0.26);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
